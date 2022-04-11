@@ -5,15 +5,145 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>MacBro</title>
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-  <link rel="stylesheet" href="css/col.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <section id="hero" class="hero mb-5">
+    <div class="container">
+      <div class="hero__main d-flex col-12">
+        <div class="hero__imgsbox col-6 mb-5">
+          <div class="hero__image mb-5">
+            <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
+            <div class="d-flex justify-content-end">
+              <button class="hero__full"><i class='bx bx-fullscreen'></i></button>
+            </div>
+          </div>
+          <div class="hero__imgs">
+            <button class="hero__slide slide">
+              <img class="slide__img aktive" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
+            </button>
+            <button class="hero__slide slide">
+              <img class="slide__img" src="https://cdn.macbro.uz/macbro/b8166836-a68f-4886-bf74-04d2ae1e38da" alt="img">
+            </button>
+            <button class="hero__slide slide">
+              <img class="slide__img" src="https://cdn.macbro.uz/macbro/dfd7cc8c-8f26-430c-ba64-7820b90d4df1" alt="img">
+            </button>
+            <button class="hero__slide slide">
+              <img class="slide__img" src="https://cdn.macbro.uz/macbro/355da324-69f8-41d0-a143-605d8e470bad" alt="img">
+            </button>
+            <button class="hero__slide slide">
+              <img class="slide__img" src="https://cdn.macbro.uz/macbro/2aa0ef46-60b7-469c-8eea-11d8bf09d9f3" alt="img">
+            </button>
+          </div>
+        </div>
 
+        <div class="hero__inner col-6">
+          <div class="d-flex">
+            <h1 id="title" class="hero__title">MacBook Air 13-inch M1/<span id="eight">8</span>/<span id="memory">256 </span><span id="colr">Gold</span></h1>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+          <div class="hero__desc">
+            <div class="hero__rams">
+              <span class="hero__ram ram">Ram</span>
+              <div class="hero__rams-btns d-flex">
+                <button id="ram-eight" class="ram__btn active">8gb</button>
+                <button id="ram-sixth" class="ram__btn">16gb</button>
+              </div>
+            </div>
+
+            <div class="hero__memory">
+              <span class="hero__ram ram">Xotira Hajmi</span>
+              <div class="hero__rams-btns d-flex">
+                <button id="memory-first" class="ram__btn active">256gb</button>
+                <button id="memory-second" class="ram__btn">512gb</button>
+                <button id="memory-third" class="ram__btn">1tb</button>
+              </div>
+            </div>
+
+            <div class="hero__color">
+              <span class="hero__ram ram">Colors</span>
+              <div class="hero__colors d-flex mb-4">
+                <button id="gold" class="hero__circle active d-flex flex-column text-center">
+                  <span class="golds"></span>
+                  gold color
+                </button>
+                <button id="silver" class="hero__circle d-flex flex-column text-center">
+                  <span class="silvers"></span>
+                  silver color
+                </button>
+              </div>
+              <div class="mb-4">
+                <button id="gray" class="hero__circle d-flex flex-column text-center">
+                  <span class="grays"></span>
+                  spacegray color
+                </button>
+              </div>
+            </div>
+
+            <div class="hero__add add d-flex mb-4">
+              <button id="minus" class="add__btn left">-</button>
+              <input class="add__input" type="text" name="text" id="text" value="1">
+              <button id="plus" class="add__btn right">+</button>
+            </div>
+
+            <div class="hero__price price mb-4">
+              <h6 id="price" class="price__title">12 497 000 so'm</h6>
+              <span class="price__old">14 621 000 so'm</span>
+            </div>
+
+            <div class="hero__btns box d-flex flex-column">
+              <button class="box__btn">Savatchaga qo'shish</button>
+              <button class="box__next">Taqqoslash</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="js/mac.js"></script>
 </body>
 
 </html>
