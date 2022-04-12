@@ -59,7 +59,13 @@ const macObject = [
     price: 21606500
   }]
     },
-    imgs: ['images/mac-silver.webp','images/mac-silver2.webp','images/mac-silver3.webp','images/mac-silver4.webp','images/mac-silver5.webp']
+    imgs: [
+      '../imgs/mac-gold-face.webp',
+      '../imgs/mac-gold-key.webp',
+      '../imgs/mac-gold-command.webp',
+      '../imgs/mac-gold-left.webp',
+      '../imgs/mac-gold-book.webp',
+    ]
   },
   {
     id:3,
@@ -87,6 +93,12 @@ const macObject = [
     price: 21606500
   }]
     },
-    imgs: ['images/mac-grey.webp','images/mac-grey2.webp','images/mac-grey3.webp','images/mac-grey4.webp','images/mac-grey5.webp']
+    imgs: [
+      '../imgs/mac-gold-face.webp',
+      '../imgs/mac-gold-key.webp',
+      '../imgs/mac-gold-command.webp',
+      '../imgs/mac-gold-left.webp',
+      '../imgs/mac-gold-book.webp',
+    ]
   }
 ];
