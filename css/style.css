@@ -33,7 +33,9 @@ body {
   border: none;
   background-color: transparent;
   font-size: 30px;
+  color: #fff;
   padding-right: 50px;
+  filter: drop-shadow(0 2px 2px #1a1a1a);
 }
 
 .hero__slide {
