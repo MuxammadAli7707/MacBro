@@ -1,9 +1,4 @@
-const elRamSixth = document.getElementById("ram-sixth");
 const elTitle = document.getElementById("title");
-const elMemoryFirst = document.getElementById("memory-first");
-const elMemorySecond = document.getElementById("memory-second");
-const elOneTb = document.getElementById("memory-third");
-const elRamEight = document.getElementById("ram-eight");
 const elEight = document.getElementById("eight");
 const elMemory = document.getElementById("memory");
 const elColor = document.getElementById("colr");
@@ -11,76 +6,337 @@ const elGold = document.getElementById("gold");
 const elSilver = document.getElementById("silver");
 const elGray = document.getElementById("gray");
 const elPrice = document.getElementById("price");
+const elImage = document.getElementById("main-img");
+const RamBox = document.getElementById("ram-box");
+const MemoryBox = document.getElementById("memory-box");
+const ColorBox = document.getElementById("color-list");
+const imgList = document.getElementById("img-list");
+
+macObject.forEach((item) => {
+  let li = document.createElement("li");
+  li.innerHTML = `
+    <button id="ram-sixth" class="ram__btn">${item.ram}GB</button>
+  `;
+  RamBox.appendChild(li);
+
+})
+const PriceBtn = document.querySelectorAll('.ram__btn');
+PriceBtn[0].classList.add('active');
+
+PriceBtn.forEach(item =>{
+  item.addEventListener('click', ()=>{
+    PriceBtn.forEach(element =>{
+      element.classList.remove('active');
+    })
+    item.classList.add('active');
+  })
+})
+
+macObject[1].mem.forEach((item) => {
+  let li = document.createElement("li");
+    li.innerHTML = `
+      <button id="memory-first" class="ram__btn memory__btns">${item.memory}</button>
+    `;
+    MemoryBox.appendChild(li);
+    console.log(MemoryBox);
+})
+
+const MemBtn = document.querySelectorAll(".memory__btns");
+MemBtn[0].classList.add("active");
+MemBtn.forEach(item =>{
+  item.addEventListener('click', ()=>{
+    MemBtn.forEach(element =>{
+      element.classList.remove('active');
+    })
+    item.classList.add('active');
+  })
+})
+
+MemBtn[2].style.display = "none";
 
 
 
-elRamSixth.addEventListener("click", ()=> {
-  elEight.textContent = "16";
-  elRamSixth.classList.add("active");
-  elRamEight.classList.remove("active");
-  elOneTb.style.display = "block";
-  elRamEight.style.display = "block";
-  elPrice.textContent = "16 935 000 so'm";
+
+PriceBtn[1].addEventListener("click", ()=> {
+  elEight.textContent = `${macObject[1].ram}`
+  PriceBtn[0].style.display = "block";
+  MemBtn[2].style.display = "block"; 
+  elPrice.textContent = `${macObject[1].mem[0].price}` 
 });
 
-elRamEight.addEventListener("click", ()=>{
-  elEight.textContent = "8";
-  elMemory.textContent = "256 ";
-  elRamSixth.classList.remove("active");
-  elRamEight.classList.add("active");
-  elOneTb.style.display = "none";  
-  elPrice.textContent = "12 497 000 so'm";
+PriceBtn[0].addEventListener("click", ()=>{
+  elEight.textContent = `${macObject[0].ram}`;
+  MemBtn[2].style.display = "none";  
+  elMemory.textContent = `${macObject[0].mem[0].memory}`;
+  elPrice.textContent = `${macObject[0].mem[0].price}`;
 })  
 
-elMemoryFirst.addEventListener("click", ()=> {
-  elMemory.textContent = "256 ";
-  elMemoryFirst.classList.add("active");
-  elMemorySecond.classList.remove("active");
-  elOneTb.classList.remove("active");
-  elOneTb.style.display = "block";
+MemBtn[0].addEventListener("click", ()=> {
+  elMemory.textContent = `${macObject[0].mem[0].memory}`;
+  MemBtn[2].style.display = "block";
+  PriceBtn[0].style.display = "block";  
   elPrice.textContent = "16 935 000 so'm";
 })
 
-elMemorySecond.addEventListener("click", ()=> {
-  elMemory.textContent = "512 ";
-  elMemoryFirst.classList.remove("active");
-  elMemorySecond.classList.add("active");
-  elOneTb.classList.remove("active");
-  elOneTb.style.display = "block";
-  elPrice.textContent = "19 270 500 so'm";
-  elRamEight.style.display = "block";
+MemBtn[1].addEventListener("click", ()=> {
+  elMemory.textContent = `${macObject[0].mem[1].memory}`;
+  MemBtn[2].style.display = "block";
+  PriceBtn[0].style.display = "block";
+  elPrice.textContent = `${macObject[0].mem[1].price}`
 })
 
-elOneTb.addEventListener("click", ()=> {
-  elMemory.textContent = "1tb";
-  elMemoryFirst.classList.remove("active");
-  elMemorySecond.classList.remove("active");
-  elOneTb.classList.add("active");
-  elRamEight.style.display = "none";
-  elRamSixth.classList.add("active");
-  elPrice.textContent = "20 438 500 so'm";
-  elOneTb.style.display = "block";
+MemBtn[2].addEventListener("click", ()=> {
+  elMemory.textContent = `${macObject[1].mem[2].memory}`;
+  PriceBtn[0].style.display = "none";
+  elPrice.textContent = `${macObject[1].mem[2].price}`;
+  MemBtn[2].style.display = "block";
 })
 
 elSilver.addEventListener("click", ()=> {
+  imgList.innerHTML = "";
+  mainImg.innerHTML = "";
+  macObject[0].silver.forEach((item) => {
+    let li = document.createElement("li");
+    li.innerHTML = `
+        <button class="hero__slide slide silvr">
+          <img class="slide__img" src="${item}" alt="img">
+        </button>
+    `;
+    imgList.appendChild(li);
+  })
+
+  macObject[0].imgSilver.forEach((item) => {
+    let li = document.createElement("li");
+    li.innerHTML = `
+      <img class="hero__imaging" src="${item}" alt="img">
+    `;
+  
+    mainImg.appendChild(li);
+  })
+  let slider = document.querySelectorAll(".hero__slide");
+  let count = 0;
+
+  slider[1].addEventListener("click", ()=> {
+    count = 1;
+    mainImg.style.transform = `translateX(-${400}px)`
+  })
+
+  slider[2].addEventListener("click", ()=> {
+    count = 2;
+    mainImg.style.transform = `translateX(-${800}px)`
+  })
+  slider[3].addEventListener("click", ()=> {
+    count = 3;
+    mainImg.style.transform = `translateX(-${1200}px)`
+  })
+  slider[4].addEventListener("click", ()=> {
+    count = 4;
+    mainImg.style.transform = `translateX(-${1600}px)`
+  })
+
+  slider[0].addEventListener("click", ()=> {
+    count = 0;
+    mainImg.style.transform = `translateX(-${0}px)`
+  })
+
+  let imgSilver = document.querySelectorAll(".silvr");
+  imgSilver[0].classList.add("aktive");
+  imgSilver.forEach(item =>{
+    item.addEventListener('click', ()=>{
+      imgSilver.forEach(element =>{
+        element.classList.remove('aktive');
+      })
+      item.classList.add('aktive');
+    })
+  })
+
   elColor.textContent = "Silver";
-  elSilver.classList.add("active");
-  elGold.classList.remove("active");
-  elGray.classList.remove("active");
-  elOneTb.style.display = "block"; 
+  MemBtn[2].style.display = "block";
+
 });
 
+
 elGray.addEventListener("click", ()=> {
+  imgList.innerHTML = "";
+  mainImg.innerHTML = "";
+  macObject[0].SpaceGray.forEach((item) => {
+    let li = document.createElement("li");
+    li.innerHTML = `
+        <button class="hero__slide slide gry">
+          <img class="slide__img" src="${item}" alt="img">
+        </button>
+    `;
+    imgList.appendChild(li);
+  })
+  macObject[0].imgGray.forEach((item) => {
+    let li = document.createElement("li");
+    li.innerHTML = `
+      <img class="hero__imaging" src="${item}" alt="img">
+    `;
+  
+    mainImg.appendChild(li);
+  })
+  let slider = document.querySelectorAll(".hero__slide");
+  let count = 0;
+
+  slider[1].addEventListener("click", ()=> {
+    count = 1;
+    mainImg.style.transform = `translateX(-${400}px)`
+  })
+
+  slider[2].addEventListener("click", ()=> {
+    count = 2;
+    mainImg.style.transform = `translateX(-${800}px)`
+  })
+  slider[3].addEventListener("click", ()=> {
+    count = 3;
+    mainImg.style.transform = `translateX(-${1200}px)`
+  })
+  slider[4].addEventListener("click", ()=> {
+    count = 4;
+    mainImg.style.transform = `translateX(-${1600}px)`
+  })
+
+  slider[0].addEventListener("click", ()=> {
+    count = 0;
+    mainImg.style.transform = `translateX(-${0}px)`
+  })
+
+  let imgGray = document.querySelectorAll(".gry");
+  imgGray[0].classList.add("aktive");
+
+  imgGray.forEach(item =>{
+    item.addEventListener('click', ()=>{
+      imgGray.forEach(element =>{
+        element.classList.remove('aktive');
+      })
+      item.classList.add('aktive');
+    })
+  })
   elColor.textContent = "Space Gray";
-  elSilver.classList.remove("active");
-  elGold.classList.remove("active");
-  elGray.classList.add("active");
-  elOneTb.style.display = "block"; 
+  MemBtn[2].style.display = "block";
 })
 
 elGold.addEventListener("click", ()=> {
+  imgList.innerHTML = "";
+  mainImg.innerHTML = "";
+  macObject[0].gold.forEach((item) => {
+    let li = document.createElement("li");
+    li.innerHTML = `
+        <button class="hero__slide slide">
+          <img class="slide__img" src="${item}" alt="img">
+        </button>
+    `;
+    imgList.appendChild(li);
+  })
+  
+  macObject[0].imgGold.forEach((item) => {
+    let li = document.createElement("li");
+    li.innerHTML = `
+      <img class="hero__imaging" src="${item}" alt="img">
+    `;
+  
+    mainImg.appendChild(li);
+  })
+  let slider = document.querySelectorAll(".hero__slide");
+  let count = 0;
+
+  slider[1].addEventListener("click", ()=> {
+    count = 1;
+    mainImg.style.transform = `translateX(-${400}px)`
+  })
+
+  slider[2].addEventListener("click", ()=> {
+    count = 2;
+    mainImg.style.transform = `translateX(-${800}px)`
+  })
+  slider[3].addEventListener("click", ()=> {
+    count = 3;
+    mainImg.style.transform = `translateX(-${1200}px)`
+  })
+  slider[4].addEventListener("click", ()=> {
+    count = 4;
+    mainImg.style.transform = `translateX(-${1600}px)`
+  })
+
+  slider[0].addEventListener("click", ()=> {
+    count = 0;
+    mainImg.style.transform = `translateX(-${0}px)`
+  })
+
+  let imgActive = document.querySelectorAll(".hero__slide");
+  imgActive[0].classList.add("aktive");
+  
+  imgActive.forEach(item =>{
+    item.addEventListener('click', ()=>{
+      imgActive.forEach(element =>{
+        element.classList.remove('aktive');
+      })
+      item.classList.add('aktive');
+    })
+  })
   elColor.textContent = "Gold";
-  elSilver.classList.remove("active");
-  elGold.classList.add("active");
-  elGray.classList.remove("active");
+  MemBtn[2].style.display = "block";
 })
+
+macObject[0].gold.forEach((item) => {
+  let li = document.createElement("li");
+  li.innerHTML = `
+      <button class="hero__slide slide">
+        <img class="slide__img" src="${item}" alt="img">
+      </button>
+  `;
+  imgList.appendChild(li);
+})
+
+
+let imgActive = document.querySelectorAll(".hero__slide");
+imgActive[0].classList.add("aktive");
+
+imgActive.forEach(item =>{
+  item.addEventListener('click', ()=>{
+    imgActive.forEach(element =>{
+      element.classList.remove('aktive');
+    })
+    item.classList.add('aktive');
+  })
+})
+
+const mainImg = document.getElementById("imgbox");
+
+macObject[0].imgGold.forEach((item) => {
+  let li = document.createElement("li");
+  li.innerHTML = `
+    <img class="hero__imaging" src="${item}" alt="img">
+  `;
+
+  mainImg.appendChild(li);
+})
+
+let slider = document.querySelectorAll(".hero__slide");
+let count = 0;
+
+slider[1].addEventListener("click", ()=> {
+  count = 1;
+  mainImg.style.transform = `translateX(-${400}px)`
+})
+
+slider[2].addEventListener("click", ()=> {
+  count = 2;
+  mainImg.style.transform = `translateX(-${800}px)`
+})
+slider[3].addEventListener("click", ()=> {
+  count = 3;
+  mainImg.style.transform = `translateX(-${1200}px)`
+})
+slider[4].addEventListener("click", ()=> {
+  count = 4;
+  mainImg.style.transform = `translateX(-${1600}px)`
+})
+
+slider[0].addEventListener("click", ()=> {
+  count = 0;
+  mainImg.style.transform = `translateX(-${0}px)`
+})
+
+

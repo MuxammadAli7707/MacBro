@@ -15,7 +15,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">MacBro</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -49,18 +49,50 @@
       </div>
     </div>
   </nav>
+
   <section id="hero" class="hero mb-5">
     <div class="container">
       <div class="hero__main d-flex col-12">
-        <div class="hero__imgsbox col-6 mb-5">
-          <div class="hero__image mb-5">
-            <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
-            <div class="d-flex justify-content-end">
-              <button class="hero__full"><i class='bx bx-fullscreen'></i></button>
-            </div>
+        <div class="hero__imgsbox col-6">
+          <div class="hero__image">
+            <ul id="imgbox" class="hero__img-list d-flex list-unstyled">
+              <!-- <li>
+                <img id="main-img" class="hero__imaging" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
+              </li>
+              <li>
+                <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/b8166836-a68f-4886-bf74-04d2ae1e38da" alt="">
+              </li>
+              <li>
+                <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/dfd7cc8c-8f26-430c-ba64-7820b90d4df1" alt="img">
+              </li>
+              <li>
+                <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/355da324-69f8-41d0-a143-605d8e470bad" alt="img">
+              </li>
+              <li>
+                <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/2aa0ef46-60b7-469c-8eea-11d8bf09d9f3" alt="img">
+              </li> -->
+            </ul>
           </div>
-          <div class="hero__imgs">
-            <button class="hero__slide slide">
+          <div class="d-flex justify-content-end mb-4">
+            <!-- Button trigger modal -->
+            <button class="hero__full" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class='bx bx-fullscreen'></i></button>
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+          <ul id="img-list" class="hero__imgs d-flex p-0 list-unstyled">
+            <!-- <button class="hero__slide slide">
               <img class="slide__img aktive" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
             </button>
             <button class="hero__slide slide">
@@ -74,8 +106,8 @@
             </button>
             <button class="hero__slide slide">
               <img class="slide__img" src="https://cdn.macbro.uz/macbro/2aa0ef46-60b7-469c-8eea-11d8bf09d9f3" alt="img">
-            </button>
-          </div>
+            </button> -->
+          </ul>
         </div>
 
         <div class="hero__inner col-6">
@@ -86,24 +118,24 @@
           <div class="hero__desc">
             <div class="hero__rams">
               <span class="hero__ram ram">Ram</span>
-              <div class="hero__rams-btns d-flex">
-                <button id="ram-eight" class="ram__btn active">8gb</button>
-                <button id="ram-sixth" class="ram__btn">16gb</button>
-              </div>
+              <ul id="ram-box" class="hero__rams-btns d-flex p-0 list-unstyled">
+                <!-- <button id="ram-eight" class="ram__btn active">8gb</button>
+                <button id="ram-sixth" class="ram__btn">16gb</button> -->
+              </ul>
             </div>
 
             <div class="hero__memory">
               <span class="hero__ram ram">Xotira Hajmi</span>
-              <div class="hero__rams-btns d-flex">
-                <button id="memory-first" class="ram__btn active">256gb</button>
+              <ul id="memory-box" class="hero__rams-btns d-flex list-unstyled p-0">
+                <!-- <button id="memory-first" class="ram__btn active">256gb</button>
                 <button id="memory-second" class="ram__btn">512gb</button>
-                <button id="memory-third" class="ram__btn">1tb</button>
-              </div>
+                <button id="memory-third" class="ram__btn">1tb</button> -->
+              </ul>
             </div>
 
             <div class="hero__color">
               <span class="hero__ram ram">Colors</span>
-              <div class="hero__colors d-flex mb-4">
+              <div id="color-list" class="hero__colors d-flex mb-4">
                 <button id="gold" class="hero__circle active d-flex flex-column text-center">
                   <span class="golds"></span>
                   gold color
@@ -123,7 +155,7 @@
 
             <div class="hero__add add d-flex mb-4">
               <button id="minus" class="add__btn left">-</button>
-              <input class="add__input" type="text" name="text" id="text" value="1">
+              <input class="add__input" type="number" name="text" id="text" value="1">
               <button id="plus" class="add__btn right">+</button>
             </div>
 
