@@ -58,10 +58,7 @@ PriceBtn[1].addEventListener("click", ()=> {
   elEight.textContent = `${macObject[1].ram}`
   PriceBtn[0].style.display = "block";
   MemBtn[2].style.display = "block"; 
-  // MemBtn.forEach((item) => {
-    // elPrice.textContent = macObject[1].mem[0].price;
-  // })
-  // elPrice.textContent = `${macObject[1].mem[0].price}` 
+  elPrice.textContent = `${macObject[1].mem[0].price}` 
 });
 
 PriceBtn[0].addEventListener("click", ()=>{
