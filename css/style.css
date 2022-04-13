@@ -45,13 +45,22 @@ body {
   padding-right: 50px;
   filter: drop-shadow(0 2px 2px #1a1a1a);
 }
-.modal-content {
 
-  /* width: 100%; */
-}
 .hero__slide {
   border: none;
   background-color: transparent;
+  border: 3px solid transparent;
+  transition: all 0.4s ease;
+  border-radius: 8px;
+  margin-right: 5px;
+  padding: 2px;
+}
+
+.hero__slide:hover {
+  border: 3px solid #1d1d1d;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+  padding: 2px;
 }
 
 .aktive {
