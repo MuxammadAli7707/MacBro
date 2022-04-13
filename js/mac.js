@@ -339,4 +339,3 @@ slider[0].addEventListener("click", ()=> {
   mainImg.style.transform = `translateX(-${0}px)`
 })
 
-
