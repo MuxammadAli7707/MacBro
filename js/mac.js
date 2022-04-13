@@ -598,3 +598,81 @@ elPlus.addEventListener("click", ()=> {
 elMinus.addEventListener("click", ()=> {
   elSub.value--;
 })
+
+let leftBtn = document.querySelector('.lefting');
+let rightBtn = document.querySelector('.righting');
+let elShow = document.getElementById("left");
+let slideList = document.querySelector('#product-list');
+let itemCard = document.querySelectorAll('#product-list li');
+
+let idx = 0;
+
+function postSlider() {
+    if(idx > itemCard.length-5){
+      idx = 0;
+    }
+    else if(idx < 0) {
+      idx = itemCard-5;
+    }
+
+    slideList.style.transform =`translateX(${-idx*380}px)`
+}
+rightBtn.addEventListener('click', ()=> {
+    idx++;
+    resetInter();
+    postSlider();
+    elShow.style.display = "flex"
+})
+leftBtn.addEventListener('click', ()=> {
+    idx--;
+    resetInter();
+    postSlider();
+})
+
+let interval = setInterval(run, 3000);
+
+function run() {
+    idx++;
+    postSlider();
+}
+function resetInter() {
+    clearInterval(interval);
+    interval = setInterval(run, 3000)
+}
+
+
+const infoLeft = document.getElementById("info-left");
+const infoRight = document.getElementById("info-right");
+const infoSlide = document.getElementById("info-slide");
+const infoTextOne = document.getElementById("info-text");
+const infoTextTwo = document.getElementById("info-next");
+
+infoRight.addEventListener("click", ()=> {
+  infoSlide.style.transform = `translateX(${590}px)`;
+  infoRight.classList.add("opasity");
+  infoLeft.classList.remove("opasity");
+  infoTextOne.style.display = "none";
+  infoTextTwo.style.display = "block";
+})
+infoLeft.addEventListener("click", ()=> {
+  infoSlide.style.transform = `translateX(${0}px)`;
+  infoRight.classList.remove("opasity");
+  infoLeft.classList.add("opasity");
+  infoTextOne.style.display = "block";
+  infoTextTwo.style.display = "none";
+})
+
+
+const helpBtn = document.getElementById("help-btn");
+const helpBox = document.getElementById("help-box");
+
+let sum = 0;
+
+helpBtn.addEventListener("click", ()=> {
+  helpBox.style.display = "flex";
+  sum++
+
+  if(sum % 2 == 0) {
+    helpBox.style.display = "none";
+  }
+})

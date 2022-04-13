@@ -13,202 +13,403 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
-    <div class="container">
-      <a class="navbar-brand" href="#">MacBro</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary" type="submit">Search</button>
-        </form>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+      <div class="container">
+        <a class="navbar-brand" href="#">MacBro</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <section id="hero" class="hero mb-5">
-    <div class="container">
-      <div class="hero__main d-flex col-12">
-        <div class="hero__imgsbox col-6">
-          <div class="hero__image">
-            <ul id="imgbox" class="hero__img-list d-flex list-unstyled">
-              <!-- <li>
-                <img id="main-img" class="hero__imaging" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
-              </li>
-              <li>
-                <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/b8166836-a68f-4886-bf74-04d2ae1e38da" alt="">
-              </li>
-              <li>
-                <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/dfd7cc8c-8f26-430c-ba64-7820b90d4df1" alt="img">
-              </li>
-              <li>
-                <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/355da324-69f8-41d0-a143-605d8e470bad" alt="img">
-              </li>
-              <li>
-                <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/2aa0ef46-60b7-469c-8eea-11d8bf09d9f3" alt="img">
-              </li> -->
-            </ul>
-          </div>
-          <div class="d-flex justify-content-end mb-4">
-            <!-- Button trigger modal -->
-            <button class="hero__full" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class='bx bx-fullscreen'></i></button>
-              <!-- Modal -->
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
-                  <div class="modal-content">
-                    <div class="modal-body d-flex flex-column align-items-center justify-content-center">
-                      <div class="hero__image">
-                        <ul id="imgboxing" class="hero__img-list d-flex list-unstyled">
-                          <!-- <li>
-                            <img id="main-img" class="hero__imaging" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
-                          </li>
-                          <li>
-                            <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/b8166836-a68f-4886-bf74-04d2ae1e38da" alt="">
-                          </li>
-                          <li>
-                            <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/dfd7cc8c-8f26-430c-ba64-7820b90d4df1" alt="img">
-                          </li>
-                          <li>
-                            <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/355da324-69f8-41d0-a143-605d8e470bad" alt="img">
-                          </li>
-                          <li>
-                            <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/2aa0ef46-60b7-469c-8eea-11d8bf09d9f3" alt="img">
-                          </li> -->
+  <main>
+    <section id="hero" class="hero mb-5">
+      <div class="container">
+        <div class="hero__main d-flex col-12">
+          <div class="hero__imgsbox col-6">
+            <div class="hero__image">
+              <ul id="imgbox" class="hero__img-list d-flex list-unstyled">
+                <!-- <li>
+                  <img id="main-img" class="hero__imaging" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
+                </li>
+                <li>
+                  <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/b8166836-a68f-4886-bf74-04d2ae1e38da" alt="">
+                </li>
+                <li>
+                  <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/dfd7cc8c-8f26-430c-ba64-7820b90d4df1" alt="img">
+                </li>
+                <li>
+                  <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/355da324-69f8-41d0-a143-605d8e470bad" alt="img">
+                </li>
+                <li>
+                  <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/2aa0ef46-60b7-469c-8eea-11d8bf09d9f3" alt="img">
+                </li> -->
+              </ul>
+            </div>
+            <div class="d-flex justify-content-end mb-4">
+              <!-- Button trigger modal -->
+              <button class="hero__full" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class='bx bx-fullscreen'></i></button>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                      <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                        <div class="hero__image">
+                          <ul id="imgboxing" class="hero__img-list d-flex list-unstyled">
+                            <!-- <li>
+                              <img id="main-img" class="hero__imaging" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
+                            </li>
+                            <li>
+                              <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/b8166836-a68f-4886-bf74-04d2ae1e38da" alt="">
+                            </li>
+                            <li>
+                              <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/dfd7cc8c-8f26-430c-ba64-7820b90d4df1" alt="img">
+                            </li>
+                            <li>
+                              <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/355da324-69f8-41d0-a143-605d8e470bad" alt="img">
+                            </li>
+                            <li>
+                              <img class="hero__imaging" src="https://cdn.macbro.uz/macbro/2aa0ef46-60b7-469c-8eea-11d8bf09d9f3" alt="img">
+                            </li> -->
+                          </ul>
+                        </div>
+                        <ul id="lists" class="hero__imgs d-flex p-0 list-unstyled">
+                          <!-- <button class="hero__slide slide">
+                            <img class="slide__img" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
+                          </button>
+                          <button class="hero__slide slide">
+                            <img class="slide__img" src="https://cdn.macbro.uz/macbro/b8166836-a68f-4886-bf74-04d2ae1e38da" alt="img">
+                          </button>
+                          <button class="hero__slide slide">
+                            <img class="slide__img" src="https://cdn.macbro.uz/macbro/dfd7cc8c-8f26-430c-ba64-7820b90d4df1" alt="img">
+                          </button>
+                          <button class="hero__slide slide">
+                            <img class="slide__img" src="https://cdn.macbro.uz/macbro/355da324-69f8-41d0-a143-605d8e470bad" alt="img">
+                          </button>
+                          <button class="hero__slide slide">
+                            <img class="slide__img" src="https://cdn.macbro.uz/macbro/2aa0ef46-60b7-469c-8eea-11d8bf09d9f3" alt="img">
+                          </button> -->
                         </ul>
                       </div>
-                      <ul id="lists" class="hero__imgs d-flex p-0 list-unstyled">
-                        <!-- <button class="hero__slide slide">
-                          <img class="slide__img" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
-                        </button>
-                        <button class="hero__slide slide">
-                          <img class="slide__img" src="https://cdn.macbro.uz/macbro/b8166836-a68f-4886-bf74-04d2ae1e38da" alt="img">
-                        </button>
-                        <button class="hero__slide slide">
-                          <img class="slide__img" src="https://cdn.macbro.uz/macbro/dfd7cc8c-8f26-430c-ba64-7820b90d4df1" alt="img">
-                        </button>
-                        <button class="hero__slide slide">
-                          <img class="slide__img" src="https://cdn.macbro.uz/macbro/355da324-69f8-41d0-a143-605d8e470bad" alt="img">
-                        </button>
-                        <button class="hero__slide slide">
-                          <img class="slide__img" src="https://cdn.macbro.uz/macbro/2aa0ef46-60b7-469c-8eea-11d8bf09d9f3" alt="img">
-                        </button> -->
-                      </ul>
-                    </div>
-
-                    <div class="modal-header">
-                      <button type="button" class="exit" data-bs-dismiss="modal" aria-label="Close"><i class='bx bx-exit-fullscreen'></i></button>
+  
+                      <div class="modal-header">
+                        <button type="button" class="exit" data-bs-dismiss="modal" aria-label="Close"><i class='bx bx-exit-fullscreen'></i></button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
+  
+            </div>
+            <ul id="img-list" class="hero__imgs d-flex p-0 list-unstyled">
+              <!-- <button class="hero__slide slide">
+                <img class="slide__img aktive" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
+              </button>
+              <button class="hero__slide slide">
+                <img class="slide__img" src="https://cdn.macbro.uz/macbro/b8166836-a68f-4886-bf74-04d2ae1e38da" alt="img">
+              </button>
+              <button class="hero__slide slide">
+                <img class="slide__img" src="https://cdn.macbro.uz/macbro/dfd7cc8c-8f26-430c-ba64-7820b90d4df1" alt="img">
+              </button>
+              <button class="hero__slide slide">
+                <img class="slide__img" src="https://cdn.macbro.uz/macbro/355da324-69f8-41d0-a143-605d8e470bad" alt="img">
+              </button>
+              <button class="hero__slide slide">
+                <img class="slide__img" src="https://cdn.macbro.uz/macbro/2aa0ef46-60b7-469c-8eea-11d8bf09d9f3" alt="img">
+              </button> -->
+            </ul>
           </div>
-          <ul id="img-list" class="hero__imgs d-flex p-0 list-unstyled">
-            <!-- <button class="hero__slide slide">
-              <img class="slide__img aktive" src="https://cdn.macbro.uz/macbro/003a584a-0d7d-4123-9f03-b3386914c6c2" alt="img">
-            </button>
-            <button class="hero__slide slide">
-              <img class="slide__img" src="https://cdn.macbro.uz/macbro/b8166836-a68f-4886-bf74-04d2ae1e38da" alt="img">
-            </button>
-            <button class="hero__slide slide">
-              <img class="slide__img" src="https://cdn.macbro.uz/macbro/dfd7cc8c-8f26-430c-ba64-7820b90d4df1" alt="img">
-            </button>
-            <button class="hero__slide slide">
-              <img class="slide__img" src="https://cdn.macbro.uz/macbro/355da324-69f8-41d0-a143-605d8e470bad" alt="img">
-            </button>
-            <button class="hero__slide slide">
-              <img class="slide__img" src="https://cdn.macbro.uz/macbro/2aa0ef46-60b7-469c-8eea-11d8bf09d9f3" alt="img">
-            </button> -->
-          </ul>
-        </div>
-
-        <div class="hero__inner col-6">
-          <div class="d-flex">
-            <h1 id="title" class="hero__title">MacBook Air 13-inch M1/<span id="eight">8</span>/<span id="memory">256 </span><span id="colr">Gold</span></h1>
-            <a href="#"><i class='bx bx-link-external'></i></a>
-          </div>
-          <div class="hero__desc">
-            <div class="hero__rams">
-              <span class="hero__ram ram">Ram</span>
-              <ul id="ram-box" class="hero__rams-btns d-flex p-0 list-unstyled">
-                <!-- <button id="ram-eight" class="ram__btn active">8gb</button>
-                <button id="ram-sixth" class="ram__btn">16gb</button> -->
-              </ul>
+  
+          <div class="hero__inner col-6">
+            <div class="d-flex">
+              <h1 id="title" class="hero__title">MacBook Air 13-inch M1/<span id="eight">8</span>/<span id="memory">256 </span><span id="colr">Gold</span></h1>
+              <a href="#"><i class='bx bx-link-external'></i></a>
             </div>
-
-            <div class="hero__memory">
-              <span class="hero__ram ram">Xotira Hajmi</span>
-              <ul id="memory-box" class="hero__rams-btns d-flex list-unstyled p-0">
-                <!-- <button id="memory-first" class="ram__btn active">256gb</button>
-                <button id="memory-second" class="ram__btn">512gb</button>
-                <button id="memory-third" class="ram__btn">1tb</button> -->
-              </ul>
-            </div>
-
-            <div class="hero__color">
-              <span class="hero__ram ram">Colors</span>
-              <div id="color-list" class="hero__colors d-flex mb-4">
-                <button id="gold" class="hero__circle active d-flex flex-column text-center">
-                  <span class="golds"></span>
-                  gold color
-                </button>
-                <button id="silver" class="hero__circle d-flex flex-column text-center">
-                  <span class="silvers"></span>
-                  silver color
-                </button>
+            <div class="hero__desc">
+              <div class="hero__rams">
+                <span class="hero__ram ram">Ram</span>
+                <ul id="ram-box" class="hero__rams-btns d-flex p-0 list-unstyled">
+                  <!-- <button id="ram-eight" class="ram__btn active">8gb</button>
+                  <button id="ram-sixth" class="ram__btn">16gb</button> -->
+                </ul>
               </div>
-              <div class="mb-4">
-                <button id="gray" class="hero__circle d-flex flex-column text-center">
-                  <span class="grays"></span>
-                  spacegray color
-                </button>
+  
+              <div class="hero__memory">
+                <span class="hero__ram ram">Xotira Hajmi</span>
+                <ul id="memory-box" class="hero__rams-btns d-flex list-unstyled p-0">
+                  <!-- <button id="memory-first" class="ram__btn active">256gb</button>
+                  <button id="memory-second" class="ram__btn">512gb</button>
+                  <button id="memory-third" class="ram__btn">1tb</button> -->
+                </ul>
               </div>
-            </div>
-
-            <div class="hero__add add d-flex mb-4">
-              <button id="minus" class="add__btn left">-</button>
-              <input class="add__input" type="number" name="text" id="text" value="1">
-              <button id="plus" class="add__btn right">+</button>
-            </div>
-
-            <div class="hero__price price mb-4">
-              <h6 id="price" class="price__title">12 497 000 so'm</h6>
-              <span class="price__old">14 621 000 so'm</span>
-            </div>
-
-            <div class="hero__btns box d-flex flex-column">
-              <button class="box__btn">Savatchaga qo'shish</button>
-              <button class="box__next">Taqqoslash</button>
+  
+              <div class="hero__color">
+                <span class="hero__ram ram">Colors</span>
+                <div id="color-list" class="hero__colors d-flex mb-4">
+                  <button id="gold" class="hero__circle active d-flex flex-column text-center">
+                    <span class="golds"></span>
+                    gold color
+                  </button>
+                  <button id="silver" class="hero__circle d-flex flex-column text-center">
+                    <span class="silvers"></span>
+                    silver color
+                  </button>
+                </div>
+                <div class="mb-4">
+                  <button id="gray" class="hero__circle d-flex flex-column text-center">
+                    <span class="grays"></span>
+                    spacegray color
+                  </button>
+                </div>
+              </div>
+  
+              <div class="hero__add add d-flex mb-4">
+                <button id="minus" class="add__btn left">-</button>
+                <input class="add__input" type="number" name="text" id="text" value="1">
+                <button id="plus" class="add__btn right">+</button>
+              </div>
+  
+              <div class="hero__price price mb-4">
+                <h6 id="price" class="price__title">12 497 000 so'm</h6>
+                <span class="price__old">14 621 000 so'm</span>
+              </div>
+  
+              <div class="hero__btns box d-flex flex-column">
+                <button class="box__btn">Savatchaga qo'shish</button>
+                <button class="box__next">Taqqoslash</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+  
+    <section id="info" class="info">
+      <div class="container">
+        <div class="info__inner">
+          <button id="info-left" class="info__title opasity">Tahlil</button>
+          <button id="info-right" class="info__title">Texnik xususiyatlari</button>
+          <span id="info-slide" class="info__back"></span>
+        </div>
+        <div id="info-text">
+          <p class="info__text">Eng ingichka va yengil Apple noutbuki endi M1 chipi tufayli yanada kuchliroq ishlaydi. 8 yadroli protsessor sizning vazifalaringizni katta tezlik blan amalga oshiradi. 8 yadroli GPU-ning to'liq quvvatidan foydalanib, grafikani talab qiladigan dasturlar va o'yinlarning keyingi darajasiga chiqing. Mashinani o'rganish uchun 16 yadroli Neural Engine yordamida operatsiyalarini tezlashtiradi va 18 soatgacha zaryad olmasdan ishlaydi. MacBook Air hali ham ixcham, lekin hozir u ancha kuchliroq.</p>
+        </div>
+        <div id="info-next" class="none">
+          <p>Ekran: 13,3 "(2560x1600)</p>
+          <p>Matritsa: IPS</p>
+          <p>Protsessor: Apple M1 (8x3200 MGts)</p>
+          <p>Video karta: Apple grafikasi 8 yadroli, Apple grafikasi 7 yadroli</p>
+          <p>Ulagichlar: Mikrofon / naushniklar kombinatsiyasi, Thunderbolt / USB 4 x 2</p>
+          <p>USB Type-C funktsiyasi: Quvvatni etkazib berish, Thunderbolt 3, Thunderbolt 4</p>
+          <p>Simsiz interfeyslar: Wi-Fi 802.11ax, Bluetooth 5.0</p>
+          <p>Batareya quvvati: 49,9 Wh</p>
+          <p>Ish vaqti: 18 soat</p>
+          <p>Operatsion tizim: macOS</p>
+          <p>Hajmi: 304.1x212.4x16.1 mm</p>
+          <p>Og'irligi: 1,29 kg</p></div>
+      </div>
+    </section>
+    <div class="container">
+      <section id="product" class="product">
+        <div class="product__inner text-center">
+          <h3 class="product__title">O'xshash mahsulotlar</h3>
+        </div>
+        <div>
+          <button id="left" class="lefting ikon"><i class='bx bx-chevron-left'></i></button>
+          <button id="right" class="righting ikon"><i class='bx bx-chevron-right' ></i></button>
+        </div>
+        <ul id="product-list" class="product__list d-flex list-unstyled p-0 m-0">
+          <li class="product__item">
+            <a class="product__link text-decoration-none" href="#">
+              <img class="product__img" src="https://cdn.macbro.uz/macbro/ad319481-63dc-4bc2-bf4d-7a6c7aec02f5" alt="img">
+              <h3 class="product__name">MacBook Pro 13" (with M1)</h3>
+              <span class="product__price">14 949 500  so'm</span>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__link text-decoration-none" href="#">
+              <img class="product__img" src="https://cdn.macbro.uz/macbro/68a37b19-71f9-4342-addb-eae078edf11e" alt="img">
+              <h3 class="product__name">MacBook Air 13" (with Intel)</h3>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__link text-decoration-none" href="#">
+              <img class="product__img" src="https://cdn.macbro.uz/macbro/98128be6-9be6-4691-a236-ea092158ed2a" alt="img">
+              <h3 class="product__name">MacBook Pro 13-inch (with Intel)</h3>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__link text-decoration-none" href="#">
+              <img class="product__img" src="https://cdn.macbro.uz/macbro/6d8aecc6-0e5e-40b5-b33d-3d9774f4208d" alt="img">
+              <h3 class="product__name">MacBook Pro 16-inch</h3>
+              <span class="product__price">25 694 000  so'm</span>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__link text-decoration-none" href="#">
+              <img class="product__img" src="https://cdn.macbro.uz/macbro/c9ad4d28-1980-4eaf-8b38-8007adcdf12e" alt="img">
+              <h3 class="product__name">Mac mini</h3>
+              <span class="product__price">9 110 000  so'm</span>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__link text-decoration-none" href="#">
+              <img class="product__img" src="https://cdn.macbro.uz/macbro/955623b2-fcab-4ff4-9b70-459ef3c8e905" alt="img">
+              <h3 class="product__name">iMac 24</h3>
+              <span class="product__price">19 270 500  so'm</span>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__link text-decoration-none" href="#">
+              <img class="product__img" src="https://cdn.macbro.uz/macbro/46c341eb-d0ca-448a-a547-f6f45d6ba95a" alt="img">
+              <h3 class="product__name">iMac 27</h3>
+              <span class="product__price">22 190 500  so'm</span>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__link text-decoration-none" href="#">
+              <img class="product__img" src="https://cdn.macbro.uz/macbro/0dafb741-6d31-43d6-b824-0b1ba4422271" alt="img">
+              <h3 class="product__name">MacBook Pro 14-inch</h3>
+              <span class="product__price">23 358 000  so'm</span>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__link text-decoration-none" href="#">
+              <img class="product__img" src="https://cdn.macbro.uz/macbro/b9c18548-4286-4fd8-91ce-d89903f46e64" alt="img">
+              <h3 class="product__name">MacBook Pro 16-inch</h3>
+              <span class="product__price">28 614 000  so'm</span>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__link text-decoration-none" href="#">
+              <img class="product__img" src="https://cdn.macbro.uz/macbro/df7ae0bb-ff0d-40b0-8fe8-d52c4a38d884" alt="img">
+              <h3 class="product__name">iMac 21</h3>
+            </a>
+          </li>
+        </ul>
+      </section>
     </div>
-  </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer__inner d-flex justify-content-between mb-4">
+        <ul class="footer__list list-unstyled p-0">
+          <h4 class="footer__title">Sotib ol</h4>
+          <li class="footer__item">
+            <a class="footer__link text-decoration-none" href="#">Mac</a>
+          </li>
+          <li class="footer__item">
+            <a  class="footer__link text-decoration-none" href="#">iPad</a>
+          </li>
+          <li class="footer__item">
+            <a  class="footer__link text-decoration-none" href="#">iPhone</a>
+          </li>
+        </ul>
+        <ul class="footer__list list-unstyled p-0">
+          <h4 class="footer__title">Kompaniya</h4>
+          <li class="footer__item">
+            <a class="footer__link text-decoration-none" href="#">Yangiliklar</a>
+          </li>
+          <li class="footer__item">
+            <a  class="footer__link text-decoration-none" href="#">Kompaniya haqida</a>
+          </li>
+          <li class="footer__item">
+            <a  class="footer__link text-decoration-none" href="#">Do'kon manzillari</a>
+          </li>
+          <li class="footer__item">
+            <a  class="footer__link text-decoration-none" href="#">Biznes uchun</a>
+          </li>
+        </ul>
+        <ul class="footer__list list-unstyled p-0">
+          <h4 class="footer__title">Ma'lumot</h4>
+          <li class="footer__item">
+            <a class="footer__link text-decoration-none" href="#">Muddatli to'lov</a>
+          </li>
+          <li class="footer__item">
+            <a  class="footer__link text-decoration-none" href="#">Yetkazib berish</a>
+          </li>
+          <li class="footer__item">
+            <a  class="footer__link text-decoration-none" href="#">Aloqa</a>
+          </li>
+        </ul>
+        <ul class="footer__list list-unstyled p-0">
+          <h4 class="footer__title">Biz bilan bog'laning</h4>
+          <div class="d-flex align-items-center">
+            <li class="footer__item">
+              <a class="footer__link text-decoration-none" href="#"><i class='bx bxl-facebook-square icons' ></i></a>
+            </li>
+            <li class="footer__item">
+              <a  class="footer__link text-decoration-none" href="#"><i class='bx bxl-instagram icons' ></i></a>
+            </li>
+            <li class="footer__item">
+              <a  class="footer__link text-decoration-none" href="#"><i class='bx bxl-telegram icons' ></i></a>
+            </li>
+            <li class="footer__item">
+              <a  class="footer__link text-decoration-none" href="#"><i class='bx bxl-youtube icons' ></i></a>
+            </li>
+            <li class="footer__item">
+              <a  class="footer__link text-decoration-none" href="#"><i class='bx bxl-tiktok icons' ></i></a>
+            </li>
+          </div>
+          <span>+998 78 777 20 20</span>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center justify-content-between">
+        <p>Onlayn do'kon MacBro.uz. Barcha huquqlar himoyalangan.</p>
+        <span>Developed by <a href="#" class="text-decoration-none">Udevs</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <ul class="help list-unstyled p-0 d-flex align-items-end flex-column">
+    <div id="help-box" class="help__box">
+      <li class="help__item">
+        <button class="help__btn first"><i class='bx bx-headphone help-ikon' ></i> <span>Operator bilan aloqa</span></button>
+      </li>
+      <li class="help__item">
+        <button class="help__btn second"><i class='bx bx-phone-call help-ikon' ></i></i> Qo'ng'iroq qilish</button>
+      </li>
+      <li class="help__item">
+        <button class="help__btn third"><i class='bx bx-bulb help-ikon' ></i> G'oya bildirish</button>
+      </li>
+      <li class="help__item">
+        <button class="help__btn four"><i class='bx bxl-telegram help-ikon' ></i> Manager</button>
+      </li>
+    </div>
+    <li class="help__item">
+      <button id="help-btn" class="help__btn five">Yordam <i class='bx bx-chevron-up' ></i></button>
+    </li>
+  </ul>
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="js/mac.js"></script>
