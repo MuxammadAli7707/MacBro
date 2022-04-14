@@ -591,6 +591,7 @@ modItms[0].addEventListener("click", ()=> {
 const elPlus = document.getElementById("plus");
 const elSub = document.getElementById("text");
 const elMinus = document.getElementById("minus");
+
 elPlus.addEventListener("click", ()=> {
   elSub.value++;
 })
